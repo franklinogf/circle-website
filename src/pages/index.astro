@@ -1,12 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Button from '../components/Button.astro';
+import Layout from '../layouts/Layout.astro'
+import Button from '../components/Button.astro'
+import ArrowIcon from '../icons/Arrow.astro'
 // Este boton es para practicar
 ---
 
 <Layout title='Circle Website'>
-	<Button>
-		Get started free ♥
-	</Button>
+  <Button>
+    <ArrowIcon
+      slot='icon-right'
+      class='ml-2 stroke-white'
+    />
+    Get started free
+  </Button>
 </Layout>
-
