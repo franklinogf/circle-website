@@ -1,0 +1,26 @@
+---
+interface Props{
+    text?: number
+}
+const {text} = Astro.props
+export const fruits = ['Manzana','Pera','Banana','Piña']
+---
+<h1>
+    {text + 1}
+</h1>
+<ul>
+{
+    fruits.map((fruit) => {
+        return <li>{fruit}</li>
+    })
+}
+</ul>
+
+<style>
+    h1{
+        color:red;
+    }
+
+    
+    
+</style>
