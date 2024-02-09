@@ -1,0 +1,40 @@
+---
+import Button from './Button.astro'
+import MenuLink from './MenuLink.astro'
+import Logo from '../icons/Logo.astro'
+---
+
+<nav
+  class='w-100 py-1 px-16 bg-white grid grid-cols-[2fr_1fr_2fr] place-content-center shadow-sm'
+>
+  <ul class='flex justify-evenly items-center'>
+    <MenuLink
+      href='#'
+      title='Pricing'
+    />
+    <MenuLink
+      href='#'
+      title='Testimonials'
+    />
+    <MenuLink
+      href='#'
+      title='Resources'
+    />
+  </ul>
+  <div class='flex justify-center items-center'>
+    <Logo />
+  </div>
+  <ul class='flex justify-evenly items-center'>
+    <MenuLink
+      href='#'
+      title='Features'
+    />
+    <MenuLink
+      href='#'
+      title='Pricing'
+    />
+    <li>
+      <Button>Login</Button>
+    </li>
+  </ul>
+</nav>
