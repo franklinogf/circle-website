@@ -1,0 +1,33 @@
+---
+import Award from '../components/Award.astro'
+
+import award1 from '../images/award-1.png'
+import award2 from '../images/award-2.png'
+import award3 from '../images/award-3.png'
+import award4 from '../images/award-4.png'
+import award5 from '../images/award-5.png'
+import award6 from '../images/award-6.png'
+
+const awards = [
+  { color: 'red', title: 'hola', img: award1 },
+  { color: 'orange', title: 'hola', img: award2 },
+  { color: 'blue', title: 'hola', img: award3 },
+  { color: 'pink', title: 'hola', img: award4 },
+  { color: 'purple', title: 'hola', img: award5 },
+  { color: 'yellow', title: 'hola', img: award6 }
+]
+---
+
+<section class='grid grid-cols-3 gap-10 p-10'>
+  {
+    awards.map((award) => {
+      return (
+        <Award
+          title={award.title}
+          color={award.color}
+          img={award.img}
+        />
+      )
+    })
+  }
+</section>
