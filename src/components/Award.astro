@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 
-interface Props {
+export interface Props {
   color: 'orange' | 'red' | 'purple' | 'blue' | 'pink' | 'yellow'
   img: ImageMetadata
   title: string
@@ -17,9 +17,7 @@ const variants = {
 }
 ---
 
-<article
-  class=`p-10 flex items-center justify-center flex-col gap-y-4 ${variants[color]}`
->
+<article class=`p-10 flex items-center justify-center flex-col gap-y-4 ${variants[color]}`>
   <Image
     src={img}
     alt={title}
