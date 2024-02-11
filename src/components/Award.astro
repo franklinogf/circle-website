@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets'
+
+interface Props {
+  color: 'orange' | 'red' | 'purple' | 'blue' | 'pink' | 'yellow'
+  img: ImageMetadata
+  title: string
+}
+const { color, img, title } = Astro.props
+const variants = {
+  orange: 'bg-orange-700/20',
+  red: 'bg-red-700/20',
+  purple: 'bg-purple-700/20',
+  blue: 'bg-blue-700/20',
+  pink: 'bg-pink-700/20',
+  yellow: 'bg-yellow-700/20'
+}
+---
+
+<article
+  class=`p-10 flex items-center justify-center flex-col gap-y-4 ${variants[color]}`
+>
+  <Image
+    src={img}
+    alt={title}
+  />
+  <p class='w-[180px] text-pretty text-center'>
+    {title}
+  </p>
+</article>
