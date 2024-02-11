@@ -1,5 +1,5 @@
 ---
-import Award from '../components/Award.astro'
+import Award, { type Props as AwardProps } from '../components/Award.astro'
 
 import award1 from '../images/award-1.png'
 import award2 from '../images/award-2.png'
@@ -8,7 +8,7 @@ import award4 from '../images/award-4.png'
 import award5 from '../images/award-5.png'
 import award6 from '../images/award-6.png'
 
-const awards = [
+const awards: AwardProps[] = [
   { color: 'red', title: 'hola', img: award1 },
   { color: 'orange', title: 'hola', img: award2 },
   { color: 'blue', title: 'hola', img: award3 },
