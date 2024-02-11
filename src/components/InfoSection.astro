@@ -5,7 +5,7 @@ import Badge from '../components/Badge.astro'
 
 interface Props {
   badgeText: string
-  paragraphs: string[]
+  paragraphs?: string[]
   buttonText: string
   img: ImageMetadata
 }
@@ -17,9 +17,8 @@ const { badgeText, paragraphs, buttonText, img } = Astro.props
     <Badge title={badgeText} />
     <slot name='title' />
     {
-      paragraphs.map((paragraph) => (
-        <p class='text-xs text-gray-700/80'>{paragraph}</p>
-      ))
+      paragraphs &&
+        paragraphs.map((paragraph) => <p class='text-xs text-gray-700/80'>{paragraph}</p>)
     }
     <Button>{buttonText}</Button>
   </div>
