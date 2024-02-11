@@ -1,0 +1,12 @@
+---
+interface Props {
+  title: string
+}
+const { title } = Astro.props
+---
+
+<span
+  class='text-[10px] uppercase text-cyan-500/80 color-cyan-500 font-bold bg-cyan-100/40 py-1 px-1 justify-center rounded-xl'
+>
+  {title}
+</span>
