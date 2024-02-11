@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 import InfoSection from '../components/InfoSection.astro'
 import sectionImage1 from '../images/section-image-1.png'
+import testimonialsImage from '../images/testimonials-image.png'
 import AwardSection from '../components/AwardSection.astro'
 import HeaderSection from '../components/HeaderSection.astro'
 ---
@@ -25,4 +26,16 @@ import HeaderSection from '../components/HeaderSection.astro'
     </h3>
   </InfoSection>
   <AwardSection />
+  <InfoSection
+    badgeText='Testimonials'
+    buttonText='See case studies'
+    img={testimonialsImage}
+  >
+    <h3
+      slot='title'
+      class='text-lg font-light'
+    >
+      See how customers <span class='font-semibold'>drive impact</span>
+    </h3>
+  </InfoSection>
 </Layout>
