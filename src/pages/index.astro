@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 import InfoSection from '../components/InfoSection.astro'
 import sectionImage1 from '../images/section-image-1.png'
+import sectionImage3 from '../images/section-image-3.png'
 import testimonialsImage from '../images/testimonials-image.png'
 import AwardSection from '../components/AwardSection.astro'
 import HeaderSection from '../components/HeaderSection.astro'
@@ -36,6 +37,18 @@ import HeaderSection from '../components/HeaderSection.astro'
       class='text-lg font-light'
     >
       See how customers <span class='font-semibold'>drive impact</span>
+    </h3>
+  </InfoSection>
+  <InfoSection
+    buttonText='Learn more'
+    img={sectionImage3}
+    paragraphs={['Check out Sogolytics enterprise feedback and experience management platform.']}
+  >
+    <h3
+      slot='title'
+      class='text-lg font-light'
+    >
+      Looking for a <span class='font-semibold'>solution</span> for your business?
     </h3>
   </InfoSection>
 </Layout>
