@@ -1,31 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Button from '../components/Button.astro'
-import { Image } from 'astro:assets'
-import headerImage from '../images/header-image.png'
 import InfoSection from '../components/InfoSection.astro'
 import sectionImage1 from '../images/section-image-1.png'
 import AwardSection from '../components/AwardSection.astro'
+import HeaderSection from '../components/HeaderSection.astro'
 ---
 
 <Layout title='Circle Website'>
-  <section class='w-100 bg-cyan-100/50 py-8 grid gap-6 justify-items-center'>
-    <h1 class='text-2xl w-1/2 text-balance text-center'>
-      A powerful online engagement tool that's intuitive and simple to use.
-    </h1>
-    <h2 class='w-2/6 text-pretty text-center text-xs text-gray-500/80'>
-      With stellar one-click reports and unmatched support, see how Circle will
-      make a difference in your business.
-    </h2>
-    <Button>Get started free</Button>
-  </section>
-  <section class='w-100 bg-gradient-to-b from-cyan-100/50 to-white p-10'>
-    <Image
-      class='mx-auto'
-      src={headerImage}
-      alt='Circle presentation'
-    />
-  </section>
+  <HeaderSection />
   <InfoSection
     badgeText='our promise'
     paragraphs={[
