@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro'
 import Button from '../components/Button.astro'
 import { Image } from 'astro:assets'
 import headerImage from '../images/header-image.png'
+import InfoSection from '../components/InfoSection.astro'
+import sectionImage1 from '../images/section-image-1.png'
 ---
 
 <Layout title='Circle Website'>
@@ -23,4 +25,20 @@ import headerImage from '../images/header-image.png'
       alt='Circle presentation'
     />
   </section>
+  <InfoSection
+    badgeText='our promise'
+    paragraphs={[
+      'Whether you want to edit your Google Docs, resolve Jira issues, or collaborate over Zoom.',
+      'Circle has 100+ integrations with tools you already use and love.'
+    ]}
+    buttonText='Get started free'
+    img={sectionImage1}
+  >
+    <h3
+      slot='title'
+      class='text-lg font-light'
+    >
+      Tool <span class='font-semibold'>built for people.</span>
+    </h3>
+  </InfoSection>
 </Layout>
