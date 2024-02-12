@@ -1,5 +1,27 @@
+---
+interface Props {
+  variant?: 'primary' | 'secondary'
+  size?: 'sm' | 'md' | 'lg' | 'xl'
+}
+const { size = 'md', variant = 'primary' } = Astro.props
+const variantColor = {
+  primary: 'bg-cyan-500 text-white hover:bg-cyan-600/80 hover:text-white/80',
+  secondary:
+    'bg-transparent text-cyan-500 hover:bg-cyan-600/80 hover:text-white/80 border-cyan-500 border'
+}
+const variantSize = {
+  sm: 'px-4 py-0.5 text-xs',
+  md: 'px-6 py-1.5 text-sm',
+  lg: 'px-6 py-2 text-lg',
+  xl: 'px-6 py-2.5 text-xl'
+}
+---
+
 <button
-  class='bg-cyan-500 border text-m px-6 py-1.5 text-white hover:bg-cyan-600/80 hover:text-white/80 font-bold ease-in-out duration-300 hover:scale-105 flex justify-between items-center'
+  class:list={[
+    'font-bold ease-in-out duration-300 hover:scale-105 flex justify-between items-center',
+    [variantSize[size], variantColor[variant]]
+  ]}
 >
   <slot name='icon' />
   <slot>Empty</slot>
