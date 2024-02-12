@@ -6,6 +6,7 @@ import sectionImage3 from '../images/section-image-3.png'
 import testimonialsImage from '../images/testimonials-image.png'
 import AwardSection from '../components/AwardSection.astro'
 import HeaderSection from '../components/HeaderSection.astro'
+import ResourcesSection from '../components/ResourcesSection.astro'
 ---
 
 <Layout title='Circle Website'>
@@ -41,8 +42,11 @@ import HeaderSection from '../components/HeaderSection.astro'
   </InfoSection>
   <InfoSection
     buttonText='Learn more'
+    secondaryButtonText='Schedule a consultation'
     img={sectionImage3}
-    paragraphs={['Check out Sogolytics enterprise feedback and experience management platform.']}
+    paragraphs={[
+      'Check out Sogolytics enterprise feedback and experience management platform.'
+    ]}
   >
     <h3
       slot='title'
@@ -51,4 +55,5 @@ import HeaderSection from '../components/HeaderSection.astro'
       Looking for a <span class='font-semibold'>solution</span> for your business?
     </h3>
   </InfoSection>
+  <ResourcesSection />
 </Layout>
