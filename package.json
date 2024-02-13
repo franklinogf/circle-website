@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "@fontsource-variable/chivo": "^5.0.9",
-    "astro": "4.3.5"
+    "astro": "4.3.5",
+    "flowbite": "^2.2.1"
   },
   "devDependencies": {
     "@astrojs/tailwind": "5.1.0",
