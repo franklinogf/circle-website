@@ -1,13 +1,18 @@
 ---
 import { Image } from 'astro:assets'
-import resourcesImage1 from '../images/resources-image-1.png'
 import Button from './Button.astro'
+
+interface Props {
+  img: ImageMetadata
+  name: string
+}
+const { img } = Astro.props
 ---
 
 <div class='space-y-4 bg-white p-5'>
   <Image
     alt={'resources1'}
-    src={resourcesImage1}
+    src={img}
   />
   <h2 class='font-bold'>Excepteur sint occaecat cupidata non proident</h2>
   <p class='text-xs text-gray-700/80'>

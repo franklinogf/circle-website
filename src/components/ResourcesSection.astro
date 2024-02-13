@@ -1,11 +1,23 @@
 ---
 import Resource from './Resource.astro'
+import resourceImage1 from '../images/resources-image-1.png'
+import resourceImage2 from '../images/resources-image-2.png'
+import resourceImage3 from '../images/resources-image-3.png'
 ---
 
 <section
   class='p-10 grid grid-cols-3 gap-x-20 bg-gradient-to-t from-cyan-200/50 to-white from-50%'
 >
-  <Resource />
-  <Resource />
-  <Resource />
+  <Resource
+    name='resource1'
+    img={resourceImage1}
+  />
+  <Resource
+    name='resource2'
+    img={resourceImage2}
+  />
+  <Resource
+    name='resource3'
+    img={resourceImage3}
+  />
 </section>
