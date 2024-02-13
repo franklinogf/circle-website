@@ -10,13 +10,7 @@ interface Props {
   img: ImageMetadata
   secondaryButtonText?: string
 }
-const {
-  badgeText,
-  paragraphs,
-  buttonText,
-  img,
-  secondaryButtonText = null
-} = Astro.props
+const { badgeText, paragraphs, buttonText, img, secondaryButtonText = null } = Astro.props
 ---
 
 <section class='w-100 flex justify-center items-center gap-x-28 py-10'>
@@ -25,14 +19,28 @@ const {
     <slot name='title' />
     {
       paragraphs &&
-        paragraphs.map((paragraph) => (
-          <p class='text-xs text-gray-700/80'>{paragraph}</p>
-        ))
+        paragraphs.map((paragraph) => <p class='text-xs text-gray-700/80'>{paragraph}</p>)
     }
-    <Button>{buttonText}</Button>
+
     {
-      secondaryButtonText && (
-        <Button variant='secondary'>{secondaryButtonText}</Button>
+      secondaryButtonText ? (
+        <div class='flex gap-x-2'>
+          <Button
+            class='shrink'
+            size='sm'
+          >
+            {buttonText}
+          </Button>
+          <Button
+            class='shrink'
+            variant='secondary'
+            size='sm'
+          >
+            {secondaryButtonText}
+          </Button>
+        </div>
+      ) : (
+        <Button size='sm'>{buttonText}</Button>
       )
     }
   </div>
