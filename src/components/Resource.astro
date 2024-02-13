@@ -5,25 +5,18 @@ import Button from './Button.astro'
 interface Props {
   img: ImageMetadata
   paragraphs: string[]
+  title: string
 }
-const { img, paragraphs } = Astro.props
+const { img, paragraphs, title } = Astro.props
 ---
 
 <div class='space-y-4 bg-white p-5 w-[380px]'>
   <Image
     class='mx-auto'
-    alt='asd'
+    alt={title}
     src={img}
   />
-  <slot
-    class='font-bold'
-    name='title'
-  />
-  {
-    paragraphs &&
-      paragraphs.map((paragraph) => (
-        <p class='text-xs text-gray-700/80'>{paragraph}</p>
-      ))
-  }
+  <h2 class='font-bold'>{title}</h2>
+  {paragraphs && paragraphs.map((paragraph) => <p class='text-xs text-gray-700/80'>{paragraph}</p>)}
   <Button>Read More</Button>
 </div>
