@@ -1,0 +1,154 @@
+---
+import InfoSection from '../components/InfoSection.astro'
+import sectionImage1 from '../images/section-image-1.png'
+import sectionImage2 from '../images/section-image-2.png'
+import sectionImage3 from '../images/section-image-3.png'
+---
+
+<section class='w-100 p-10 flex flex-col items-center justify-center'>
+  <div class='mb-4 border-b border-gray-200 dark:border-gray-700'>
+    <ul
+      class='flex flex-wrap -mb-px text-sm font-medium text-center'
+      id='default-tab'
+      data-tabs-toggle='#default-tab-content'
+      role='tablist'
+    >
+      <li
+        class='me-2'
+        role='presentation'
+      >
+        <button
+          class='inline-block p-4 border-b-2 rounded-t-lg'
+          id='profile-tab'
+          data-tabs-target='#profile'
+          type='button'
+          role='tab'
+          aria-controls='profile'
+          aria-selected='false'
+          >Profile</button
+        >
+      </li>
+      <li
+        class='me-2'
+        role='presentation'
+      >
+        <button
+          class='inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300'
+          id='dashboard-tab'
+          data-tabs-target='#dashboard'
+          type='button'
+          role='tab'
+          aria-controls='dashboard'
+          aria-selected='false'
+          >Dashboard</button
+        >
+      </li>
+      <li
+        class='me-2'
+        role='presentation'
+      >
+        <button
+          class='inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300'
+          id='settings-tab'
+          data-tabs-target='#settings'
+          type='button'
+          role='tab'
+          aria-controls='settings'
+          aria-selected='false'
+          >Settings</button
+        >
+      </li>
+      <li role='presentation'>
+        <button
+          class='inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300'
+          id='contacts-tab'
+          data-tabs-target='#contacts'
+          type='button'
+          role='tab'
+          aria-controls='contacts'
+          aria-selected='false'
+          >Contacts</button
+        >
+      </li>
+    </ul>
+  </div>
+  <div id='default-tab-content'>
+    <div
+      class='hidden p-4 rounded-lg bg-cyan-100/50 dark:bg-gray-800 w-[800px]'
+      id='profile'
+      role='tabpanel'
+      aria-labelledby='profile-tab'
+    >
+      <InfoSection
+        badgeText='Testimonials'
+        buttonText='See case studies'
+        img={sectionImage1}
+      >
+        <h3
+          slot='title'
+          class='text-lg font-light'
+        >
+          See how customers <span class='font-semibold'>drive impact</span>
+        </h3>
+      </InfoSection>
+    </div>
+
+    <div
+      class='hidden p-4 rounded-lg bg-cyan-100/50 dark:bg-gray-800 w-[800px]'
+      id='dashboard'
+      role='tabpanel'
+      aria-labelledby='dashboard-tab'
+    >
+      <InfoSection
+        badgeText='Testimonials'
+        buttonText='See case studies'
+        img={sectionImage2}
+      >
+        <h3
+          slot='title'
+          class='text-lg font-light'
+        >
+          See how customers <span class='font-semibold'>drive impact</span>
+        </h3>
+      </InfoSection>
+    </div>
+    <div
+      class='hidden p-4 rounded-lg bg-cyan-100/50 dark:bg-gray-800 w-[800px]'
+      id='settings'
+      role='tabpanel'
+      aria-labelledby='settings-tab'
+    >
+      <InfoSection
+        badgeText='Testimonials'
+        buttonText='See case studies'
+        img={sectionImage3}
+      >
+        <h3
+          slot='title'
+          class='text-lg font-light'
+        >
+          See how customers <span class='font-semibold'>drive impact</span>
+        </h3>
+      </InfoSection>
+    </div>
+    <div
+      class='hidden p-4 rounded-lg bg-cyan-100/50 dark:bg-gray-800 w-[800px]'
+      id='contacts'
+      role='tabpanel'
+      aria-labelledby='contacts-tab'
+    >
+      <InfoSection
+        badgeText='Testimonials'
+        buttonText='See case studies'
+        img={sectionImage1}
+      >
+        <h3
+          slot='title'
+          class='text-lg font-light'
+        >
+          See how customers <span class='font-semibold'>drive impact</span>
+        </h3>
+      </InfoSection>
+    </div>
+  </div>
+</section>

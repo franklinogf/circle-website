@@ -7,6 +7,7 @@ import testimonialsImage from '../images/testimonials-image.png'
 import AwardSection from '../components/AwardSection.astro'
 import HeaderSection from '../components/HeaderSection.astro'
 import ResourcesSection from '../components/ResourcesSection.astro'
+import OurPeopleSection from '../components/OurPeopleSection.astro'
 ---
 
 <Layout title='Circle Website'>
@@ -28,6 +29,9 @@ import ResourcesSection from '../components/ResourcesSection.astro'
     </h3>
   </InfoSection>
   <AwardSection />
+
+  <OurPeopleSection />
+
   <InfoSection
     badgeText='Testimonials'
     buttonText='See case studies'
@@ -44,9 +48,7 @@ import ResourcesSection from '../components/ResourcesSection.astro'
     buttonText='Learn more'
     secondaryButtonText='Schedule a consultation'
     img={sectionImage3}
-    paragraphs={[
-      'Check out Sogolytics enterprise feedback and experience management platform.'
-    ]}
+    paragraphs={['Check out Sogolytics enterprise feedback and experience management platform.']}
   >
     <h3
       slot='title'
