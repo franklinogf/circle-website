@@ -3,9 +3,18 @@ import InfoSection from '../components/InfoSection.astro'
 import sectionImage1 from '../images/section-image-1.png'
 import sectionImage2 from '../images/section-image-2.png'
 import sectionImage3 from '../images/section-image-3.png'
+import Badge from '../components/Badge.astro'
 ---
 
 <section class='w-100 p-10 flex flex-col items-center justify-center'>
+  <Badge title='build for people' />
+  <h3 class='text-lg font-light'>
+    <span class='font-semibold'>Easy</span> for beginners. <span
+      class='font-semibold'
+    >
+      Powerful</span
+    > for experts.
+  </h3>
   <div class='mb-4 border-b border-gray-200 dark:border-gray-700'>
     <ul
       class='flex flex-wrap -mb-px text-sm font-medium text-center'
